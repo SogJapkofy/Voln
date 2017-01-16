@@ -1,0 +1,8 @@
+{
+	"name":"3",
+	"says":
+	[
+		{"what":"This is random encounter 1"},
+		{"what":"You found way to forest. Should appear on your map."}
+	]
+}

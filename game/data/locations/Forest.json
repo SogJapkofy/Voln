@@ -1,0 +1,9 @@
+{ 
+	"name":"Forest",
+	"image":"forest",
+	"map":"Map1",
+	"x":600,
+	"y":600,
+	"event":"forest 1",
+	"background":"forest"
+}

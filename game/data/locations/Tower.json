@@ -1,0 +1,9 @@
+{ 
+	"name":"Tower",
+	"image":"tower",
+	"map":"Map2",
+	"x":250,
+	"y":400,
+	"event":"tower",
+	"background":"tower"
+}

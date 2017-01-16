@@ -1,0 +1,9 @@
+{
+	"name":"1",
+	"says":
+	[
+		{"what":"Welcome in demo game!"},
+		{"what":"You can read previous message again in game history. (click RMB)"},
+		{"what":"You start in void, but you can chose new place to go, by clicking map icon.\n\nIt will appear right after this dialog."}		
+	]
+}

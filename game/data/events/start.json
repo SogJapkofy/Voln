@@ -1,0 +1,8 @@
+{
+	"name":"start",
+	"event":{"type":"dialog", "name":"1"},
+	"events list":
+	[
+		{"name":"2", "chance":100}
+	]
+}

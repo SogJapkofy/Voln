@@ -1,0 +1,6 @@
+log.txt
+errors.txt
+traceback.txt
+project.json
+game/saves/
+**.rpyc

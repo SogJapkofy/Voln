@@ -1,0 +1,9 @@
+{
+	"name":"1",
+	"text":"Chose whatever you want to do:",
+	"choices":
+	[
+		{"text":"Unlock tower location.", "event":"forest 2"},
+		{"text":"Nothing", "event":null}
+	]
+}

@@ -1,0 +1,8 @@
+{
+	"name":"forest 2",
+	"event":{"type":"enable location", "location":"Tower"},
+	"events list":
+	[
+		{"name":"forest 3", "chance":100}
+	]
+}
