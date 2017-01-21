@@ -1,7 +1,9 @@
 # The script of the game goes in this file.
-default player = Player("Nameless")
+default player = Player("Nameless", [Attribute("STR","Strength",0), Attribute("FOU","Foundation",0), Attribute("DEX","Dextelity",0), Attribute("END","Endurance",0), Attribute("TOR","Toru",0), Attribute("INT","Intellect",0), Attribute("WIS","Wisdom",0)], [Bar("Health",50), Bar("Stamina"), Bar("Lust"), Bar("EXP")])
 # The game starts here.
 label start:
+    show screen stats()
+    show screen bars()
     $player.set_location("START")
     
 label say:

@@ -33,8 +33,10 @@ init -10 python:
     ###Player class###
     
     class Player(object):
-        def __init__(self, name):
+        def __init__(self, name, attributes, bars):
             self.char = DynamicCharacter(name)
+            self.attributes = attributes
+            self.bars = bars
             self.maps = {}
             self.locations = {}
             self.map = None
@@ -64,19 +66,20 @@ init -10 python:
                 
     ###Classes###
     
-    class AttributeCategory:
-        list = []
-        def __init__(self, name, color):
-            self.name = name
-            self.color = color
-    
     class Attribute:
         def __init__(self, tag, name, value):
             self.tag = tag
             self.name = name
             self.value = value
-    
-    ####
+            
+    class Bar:
+        def __init__(self, name, value = -1, max = 100):
+            self.name = name
+            if value < 0:
+                self.value = max
+            else:
+                self.value = value
+            self.max = max
     
     class Map:
         def __init__(self, name, image, x, y):

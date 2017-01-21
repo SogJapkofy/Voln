@@ -114,7 +114,7 @@ screen say(who, what):
                 style "namebox"
                 text who id "who"
 
-        text what id "what"
+        text what id "what" xalign 0.5
 
 
     ## If there's a side image, display it above the text. Do not display on the
@@ -133,12 +133,12 @@ style namebox_label is say_label
 
 
 style window:
-    xalign 0.5
-    xfill True
-    yalign gui.textbox_yalign
-    ysize gui.textbox_height
+    xpos 260
+    ypos 140
+    xsize 750
+    ysize 400
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Frame("gui/textbox.png", xalign=0.5, yalign=0.5)
 
 style namebox:
     xpos gui.name_xpos
@@ -154,7 +154,6 @@ style say_label:
     color gui.accent_color
     font gui.name_font
     size gui.name_text_size
-    xalign gui.name_xalign
     yalign 0.5
 
 style say_dialogue:
@@ -1490,10 +1489,10 @@ screen map_list():
             
 screen map(map, location, locations):
     frame:
-        xsize min(map.x+8,1280)
-        ysize min(map.y+8,720)
-        xalign 0.5
-        yalign 0.5
+        xsize min(map.x+8,750) #min(map.x+8,1280)
+        ysize min(map.y+8,400) #min(map.y+8,720)
+        xpos 260 #xalign 0.5
+        ypos 140 #yalign 0.5
         viewport:
             edgescroll (150, 100)
             if location.x < 0 or location.y <0 or map.name != location.map:
@@ -1517,7 +1516,33 @@ screen activites:
     frame:
         padding (30, 30)
         xalign 0.5
-        yalign 1.0
+        yalign 0.5
         hbox:
             if player.map != None:
                 imagebutton idle "gui map" action Return("map")
+
+screen stats:
+    frame:
+        xpos 20
+        ypos 140
+        xsize 220
+        ysize 280
+        vbox:
+            xfill True
+            text player.char.name xalign 0.5
+            for v in player.attributes:
+                hbox:
+                    text v.tag
+                    text str(v.value)
+
+screen bars:
+    frame:
+        xalign 0.5
+        yalign 1.0
+        vbox:
+            for v in player.bars:
+                frame:
+                    xsize 350
+                    ysize 25
+                    bar value v.value range v.max xfill True yfill True
+                    text v.name xalign 0.5
